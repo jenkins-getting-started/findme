@@ -1,0 +1,14 @@
+---
+pipeline:
+  agent:
+    any:
+  stages:
+    - stage: "first"
+      steps:
+        - sh "echo hello stageless sh step"
+        - echo "hello first stage"
+        - echo "hello stageless echo step"
+    - stage: "second"
+      steps:
+        - sh 'echo hello second stage'
+  #  https://plugins.jenkins.io/pipeline-as-yaml/
